@@ -8,6 +8,7 @@ use App\Models\SiteSetting;
 use App\Models\Feature;
 use App\Models\Article;
 use App\Models\Ad;
+use App\Models\Contact;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -42,6 +43,10 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer('components.ads.*', function ($view) {
             $view->with('ads', Ad::all());
+
+        });
+        View::composer('pages.contacts.*', function ($view) {
+            $view->with('ads', Contact::first());
 
         });
    

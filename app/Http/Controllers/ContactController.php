@@ -2,64 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $contacts = Contact::first();
+        return view(config('routes.views.contacts.index'), compact('contacts'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    
+    public function aboutPage()
     {
-        //
+        return view (config('routes.views.contacts.aboutPage'));
     }
+ 
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $contact = Contact::findOrFail($id);
+       
+        $contact->update($request->only(['email', 'phone', 'address', 'social_media_name', 'social_media_url']));
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
+        $contact->save();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Contact $contact)
-    {
-        //
+        return redirect()->route(config('routes.routes.contacts.index'))->with('success', 'Contact updated successfully.');
     }
 }
