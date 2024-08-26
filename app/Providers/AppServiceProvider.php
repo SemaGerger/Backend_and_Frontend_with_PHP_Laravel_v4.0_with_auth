@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use App\Models\SiteSetting;
 use App\Models\Feature;
 use App\Models\Article;
+use App\Models\Ad;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,11 +18,16 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-         View::composer('index', function ($view) {
-            $view->with('settings', SiteSetting::first());
+        $settings = SiteSetting::first();
+
+         View::composer('index', function ($view) use ($settings) {
+            $view->with('settings', $settings );
      
         });
-        
+        View::composer('layouts.*', function ($view) use ($settings) {
+            $view->with('settings', $settings);
+        });
+
         View::composer('components.features.*', function ($view) {
             $view->with('features', Feature::all());
 
@@ -29,11 +35,16 @@ class AppServiceProvider extends ServiceProvider
    
         View::composer('pages.articles.*', function ($view){
             $articles = Article::with('subjects', 'tags')->get();
+          
             $view->with('articles', $articles);
 
         }); 
 
+        View::composer('components.ads.*', function ($view) {
+            $view->with('ads', Ad::all());
 
+        });
+   
 
 
 

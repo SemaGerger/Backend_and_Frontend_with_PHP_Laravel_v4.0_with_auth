@@ -71,8 +71,8 @@ return [
         'store' => 'admin.articles.store',
     ],
     'categories' => [
-                    'index' => 'admin.categories.index',
-                    'create' => 'admin.categories.create',
+        'index' => 'admin.categories.index',
+        'create' => 'admin.categories.create',
     ],
     
     'features' => [
@@ -87,6 +87,9 @@ return [
         'index' => 'pages.contacts.index',
         'aboutPage' => 'pages.contacts.aboutPage',
     ],
+    'ads' =>[
+        'index' => 'components.ads.index'
+    ]
             
    
 

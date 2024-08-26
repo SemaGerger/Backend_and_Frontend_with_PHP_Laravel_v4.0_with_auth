@@ -34,16 +34,15 @@ Route::get('/iletisim', [ContactController::class, 'index'])->name('contacts.ind
 Route::get('/hakkimizda', [ContactController::class, 'aboutPage'])->name('contacts.aboutPage'); 
 
 //* articles
+Route::resource('/makaleler', ArticleController::class);
 Route::get('/makale/{slug}', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/makaleler', [ArticleController::class, 'index'])->name('articles.index');
 
-
 //* questions
+Route::resource('/questions', QuestionController::class);
 
 //*features
 Route::resource('/features', FeatureController::class);
-
-
 
 //* filter
 Route::resource('/filtre', FilterController::class);

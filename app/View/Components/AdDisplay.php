@@ -21,6 +21,6 @@ class AdDisplay extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.ad-display');
+        return view(config('routes.routes.ads.index'));
     }
 }

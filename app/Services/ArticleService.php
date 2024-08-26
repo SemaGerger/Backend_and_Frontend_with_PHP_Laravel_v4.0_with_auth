@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+
+
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
@@ -14,7 +16,7 @@ class ArticleService
             'slug' => Str::slug($validated['title']),
             'meta_author' => $validated['meta_author'],
             'meta_keywords' => $validated['meta_keywords'],
-            'image_table' => $fileName ?? null,
+            'image_table' => $fileName,
             'main_id' => $validated['main_id'],
             'exam_id' => $validated['exam_id'],
             'field_id' => $validated['field_id'],
@@ -32,6 +34,7 @@ class ArticleService
         $file->storeAs('public/articles', $fileName);
         return $fileName;
     }
+
     public function getValidationRules()
     {
         return [
