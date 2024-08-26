@@ -60,7 +60,6 @@ class ArticleController extends Controller
     // }
     public function index()
     {
-      
         // $articles = Article::with('subjects', 'tags')->get();   
         // return view(config('routes.views.articles.index'), compact('articles'));
         return view(config('routes.views.articles.index'));
@@ -68,7 +67,6 @@ class ArticleController extends Controller
     public function list()
     {
         $data = $this->getAllData();
-       
         $articles = Article::with('subjects', 'tags')->get();
         return view(config('views.articles.list'), compact('articles', 'data'));
     }

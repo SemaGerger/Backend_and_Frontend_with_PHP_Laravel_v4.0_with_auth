@@ -17,6 +17,10 @@ body {
     background-color: var(--primary-bg-color);
 }
 
+.logo-img {
+    height: 40px;
+    width: auto;
+}
 
 .hero {
     position: relative;

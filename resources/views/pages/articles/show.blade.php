@@ -7,8 +7,8 @@
 
 @extends('layouts.app')
 
-@section('meta_description', $article->meta_description ?? 'Varsayılan meta açıklama')
-@section('meta_keywords', $article->meta_keywords ?? 'Varsayılan, anahtar, kelimeler')
+    @section('meta_description', $article->meta_description ?? 'Varsayılan meta açıklama')
+    @section('meta_keywords', $article->meta_keywords ?? 'Varsayılan, anahtar, kelimeler')
 
 @section('title', $article->title ?? 'Varsayılan Başlık')
 

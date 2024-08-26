@@ -12,8 +12,7 @@ class FeatureController extends Controller
         // $features = Feature::all();
       
      return view(config('routes.views.siteSettings.index'));
-        // return view(config('routes.views.siteSettings.index')->compact('features'));
-
+        //return view(config('routes.views.siteSettings.index')->compact('features'));
         //return view('components.features.index', ['features' => $features]);
         //return view('components.features.index')->with('features', $features);
 
