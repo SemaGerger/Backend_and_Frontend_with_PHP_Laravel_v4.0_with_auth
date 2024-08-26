@@ -37,7 +37,7 @@ class ArticleController extends Controller
             'allTags' => Tag::all(),
             'allAds' => Ad::where('id', 1)->get(),
             'allContacts' => Contact::first(),
-            'allArticles' => Article::all(),
+
          
         ];
     }
@@ -60,9 +60,10 @@ class ArticleController extends Controller
     // }
     public function index()
     {
-        $data = $this->getAllData();
-        $articles = Article::with('subjects', 'tags')->get();
-        return view(config('views.articles.index'), compact('articles', 'data'));
+      
+        // $articles = Article::with('subjects', 'tags')->get();   
+        // return view(config('routes.views.articles.index'), compact('articles'));
+        return view(config('routes.views.articles.index'));
     }
     public function list()
     {
@@ -74,8 +75,8 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
         $data = $this->getAllData();
-        $articles = Article::with('subjects', 'tags')->get();    
-        return view(config('views.articles.show'), compact('articles', 'data'));
+        // $articles = Article::with('subjects', 'tags')->get();    
+        return view(config('routes.views.articles.show'), compact('data'));
     }
 
     public function toggleStatus(Article $article)

@@ -4,12 +4,10 @@
 
 @section('content')
 
-        @include('layouts.banner')
-        @include('components.features.index')
-        @include('pages.articles.index')
-      
-      
-        
-      
+    @include('layouts.banner')
+    @include(config('routes.views.features.index'))
+    @include(config('routes.views.articles.index'))
+
 @endsection
+
 

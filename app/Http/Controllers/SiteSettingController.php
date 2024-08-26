@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\SiteSetting;
 use Illuminate\Http\Request;
+use App\Models\Article;
+use App\Models\Feature;
 
 class SiteSettingController extends Controller
 {
@@ -12,7 +14,9 @@ class SiteSettingController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::with('subjects', 'tags')->get(); 
+        $features = Feature::all();
+        return view(config('routes.views.siteSettings.index'), compact('articles', 'features'));
     }
 
     /**

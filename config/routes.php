@@ -17,9 +17,9 @@ return [
         'index' => 'filtre.index'
     ],
     'articles' => [
-        'index' => 'admin.articles.index',
+        'index' => 'articles.index',
         'list' => 'admin.articles.list',
-        'show' => 'admin.articles.show',
+        'show' => 'articles.show',
         'create' => 'admin.articles.create',
         'edit' => 'admin.articles.edit',
         'update' => 'admin.articles.update',

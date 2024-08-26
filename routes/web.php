@@ -15,7 +15,10 @@ use App\Http\Controllers\ExamController;
 use App\Http\Controllers\FieldController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\SubjectController;
-use App\Http\Controllers\FeaturedController;
+use App\Http\Controllers\FeatureController;
+
+
+
 
 
 //todo FRONT
@@ -31,9 +34,16 @@ Route::get('/iletisim', [ContactController::class, 'index'])->name('contacts.ind
 Route::get('/hakkimizda', [ContactController::class, 'aboutPage'])->name('contacts.aboutPage'); 
 
 //* articles
-Route::get('/makale/{slug}', [ArticleController::class, 'show'])->name('front.article');
+Route::get('/makale/{slug}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/makaleler', [ArticleController::class, 'index'])->name('articles.index');
+
 
 //* questions
+
+//*features
+Route::resource('/features', FeatureController::class);
+
+
 
 //* filter
 Route::resource('/filtre', FilterController::class);

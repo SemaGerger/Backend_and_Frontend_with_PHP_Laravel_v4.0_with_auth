@@ -21,8 +21,12 @@
 <body>
     @include('layouts.navbar') 
 
+
     @yield('content')
- 
+        
+
+      
+
 
     @section('footer')
         @include('layouts.footer')
