@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Feature;
 use Illuminate\Http\Request;
+use App\Models\Feature; 
 
 class FeatureController extends Controller
 {
     public function index()
     {
-        // $features = Feature::all();
+        $features = features();
       
-     return view(config('routes.views.siteSettings.index'));
-        //return view(config('routes.views.siteSettings.index')->compact('features'));
+     return view(config('routes.views.features.index')->compact('features')); 
+  
+     //return view(config('routes.views.siteSettings.index')->compact('features'));
         //return view('components.features.index', ['features' => $features]);
         //return view('components.features.index')->with('features', $features);
 

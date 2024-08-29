@@ -9,7 +9,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>{{ $settings->site_title ?? 'Site Başlığı' }}</h5>
         <p>{{ $settings->site_description ?? 'Site Açıklaması' }}</p>
-        <a href="{{ route('filtre.index') }}" class="btn btn-warning btn-lg disabled">Soru Bul Çok Yakında</a>
+        <a href="{{ route(config('routes.routes.filter.index')) }}" class="btn btn-warning btn-lg disabled">Soru Bul Çok Yakında</a>
       </div>
     </div>
   
@@ -21,7 +21,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h5>{{ $settings->site_title ?? 'Site Başlığı' }}</h5>
           <p>{{ $settings->site_description ?? 'Site Açıklaması' }}</p>
-          <a href="{{ route('filtre.index') }}" class="btn btn-warning btn-lg">Soru Bul</a>
+          <a href="{{ route(config('routes.routes.filter.index')) }}" class="btn btn-warning btn-lg">Soru Bul</a>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h5>{{ $settings->site_title ?? 'Site Başlığı' }}</h5>
           <p>{{ $settings->site_description ?? 'Site Açıklaması' }}</p>
-          <a href="{{ route('filtre.index') }}" class="btn btn-warning btn-lg">Soru Bul</a>
+          <a href="{{ route(config('routes.routes.filter.index')) }}" class="btn btn-warning btn-lg">Soru Bul</a>
         </div>
     </div>
    

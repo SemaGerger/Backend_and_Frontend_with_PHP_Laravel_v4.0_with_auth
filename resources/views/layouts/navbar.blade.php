@@ -2,7 +2,7 @@
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ route(config('routes.routes.siteSettings.index')) }}">
             <img src="{{ asset('storage/images/logo5.gif') }}" alt="Logo" class="logo-img mr-2">
-            <span>{{ $settings->site_title }}</span>
+            <span>{{ $siteSettings->site_title }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

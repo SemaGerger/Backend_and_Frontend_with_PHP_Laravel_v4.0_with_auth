@@ -43,9 +43,12 @@ Route::resource('/questions', QuestionController::class);
 
 //*features
 Route::resource('/features', FeatureController::class);
+//Route::get('/features', [FeatureController::class, 'index']);
+
 
 //* filter
 Route::resource('/filtre', FilterController::class);
+
 Route::get('/filter/mains/{categoryId}', [FilterController::class, 'getMains']);
 Route::get('/filter/exams/{mainId}', [FilterController::class, 'getExams']);
 Route::get('/filter/fields/{examId}', [FilterController::class, 'getFields']);

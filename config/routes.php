@@ -14,7 +14,8 @@ return [
         'store' => 'admin.siteSettings.store',
     ],
     'filter' =>[
-        'index' => 'filtre.index'
+        'index' => 'filtre.index',
+       
     ],
     'articles' => [
         'index' => 'articles.index',
@@ -25,12 +26,22 @@ return [
         'update' => 'admin.articles.update',
         'store' => 'admin.articles.store',
     ],
+    'questions' => [
+        'index' => 'pages.questions.index',
+        'list' => 'admin.questions.list',
+        
+        'show' => 'admin.questions.show',
+        'create' => 'admin.questions.create',
+        'edit' => 'admin.questions.edit',
+        'update' => 'admin.questions.update',
+        'store' => 'admin.questions.store',
+    ],
     'categories' => [
-                'index' => 'admin.categories.index',
-                'create' => 'admin.categories.create',
-                'edit' => 'admin.categories.edit',
-                'update' => 'admin.categories.update',
-                'store' => 'admin.categories.store',
+        'index' => 'admin.categories.index',
+        'create' => 'admin.categories.create',
+        'edit' => 'admin.categories.edit',
+        'update' => 'admin.categories.update',
+        'store' => 'admin.categories.store',
     ],
     'features' => [
                 'index' => 'admin.features.index',
@@ -69,6 +80,16 @@ return [
         'edit' => 'admin.articles.edit',
         'update' => 'admin.articles.update',
         'store' => 'admin.articles.store',
+    ],
+    'questions' => [
+        'index' => 'pages.questions.index',
+        'list' => 'pages.questions.list',
+        'filter' => 'pages.questions.filter',
+        'show' => 'pages.questions.show',
+        'create' => 'admin.questions.create',
+        'edit' => 'admin.questions.edit',
+        'update' => 'admin.questions.update',
+        'store' => 'admin.questions.store',
     ],
     'categories' => [
         'index' => 'admin.categories.index',
