@@ -14,9 +14,9 @@ class SiteSettingController extends Controller
      */
     public function index()
     {
-        $articles = Article::with('subjects', 'tags')->get(); 
+        // $articles = Article::with('subjects', 'tags')->get(); 
         // $features = Feature::all();
-        return view(config('routes.views.siteSettings.index'), compact('articles', 'features'));
+        return view(config('routes.views.siteSettings.index'));
     }
 
     /**

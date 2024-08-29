@@ -17,6 +17,7 @@ use App\Http\Controllers\LessonController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\FeatureController;
 
+use App\Http\Controllers\ImageController; // storage için
 
 
 
@@ -44,9 +45,12 @@ Route::resource('/questions', QuestionController::class);
 //*features
 Route::resource('/features', FeatureController::class);
 
-
+//*images to stroge
+Route::post('/upload', [ImageController::class, 'upload'])->name('upload');
 //Route::get('/features', [FeatureController::class, 'index']);
 
+
+Route::post('/upload', [ImageController::class, 'upload'])->name('upload');
 
 //* filter
 Route::resource('/filtre', FilterController::class);
