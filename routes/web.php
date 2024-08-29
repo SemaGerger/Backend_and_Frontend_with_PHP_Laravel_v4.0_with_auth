@@ -43,6 +43,8 @@ Route::resource('/questions', QuestionController::class);
 
 //*features
 Route::resource('/features', FeatureController::class);
+
+
 //Route::get('/features', [FeatureController::class, 'index']);
 
 

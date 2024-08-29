@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\View;
+//use Illuminate\Support\Facades\View;
 // use App\Models\SiteSetting;
 // use App\Models\Feature;
 // use App\Models\Article;

@@ -37,6 +37,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\ForceHttps::class,
+            \App\Http\Middleware\GlobalDataMiddleware::class,
         ],
 
         'api' => [
@@ -67,9 +68,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'isAdmin' => \App\Http\Middleware\IsAdmin::class,
         'isLogin' => \App\Http\Middleware\IsLogin::class,
-        'web' => [
-        
-            \App\Http\Middleware\GlobalDataMiddleware::class,
-        ],
+       
     ];
 }

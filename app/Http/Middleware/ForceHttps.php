@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+
 class ForceHttps
 {
     /**
@@ -15,9 +16,9 @@ class ForceHttps
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$request->secure()) {
-            return redirect()->secure($request->getRequestUri());
-        }
+        // if (!$request->secure()) {
+        //     return redirect()->secure($request->getRequestUri());
+        // }
 
         return $next($request);
     }
