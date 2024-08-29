@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $settings->site_title ?? 'Ana Sayfa')
+@section('title', $siteSettings->site_title ?? 'Ana Sayfa')
 
 @section('content')
 
