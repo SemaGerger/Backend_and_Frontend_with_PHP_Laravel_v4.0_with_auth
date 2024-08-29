@@ -20,24 +20,27 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
     
-    View::share('siteSettings', getSiteSettings()); //singloten yaklaşımı ile helpers.php den geliyor
+    // View::share('siteSettings', getSiteSettings()); //singloten yaklaşımı ile helpers.php den geliyor
 
-    View::composer('*', function ($view) {
-        $view->with('features', getAllFeatures());
-    });
+    // View::composer('*', function ($view) {
+    //     $view->with('features', getAllFeatures());
+    // });
 
-    View::composer('pages.articles.*', function ($view) {
-        $articles = getArticlesWithRelations();
-        $view->with('articles', $articles);
-    });
+    // View::composer('pages.articles.*', function ($view) {
+    //     $articles = getArticlesWithRelations();
+    //     $view->with('articles', $articles);
+    // });
 
-    View::composer('components.ads.*', function ($view) {
-        $view->with('ads', getAllAds());
-    });
+    // View::composer('components.ads.*', function ($view) {
+    //     $view->with('ads', getAllAds());
+    // });
 
-    View::composer('pages.contacts.*', function ($view) {
-        $view->with('contact', getContactInfo());
-    });
+    // View::composer('pages.contacts.*', function ($view) {
+    //     $view->with('contact', getContactInfo());
+    // });
+
+
+    //---------------------------------
        
         // View::share('siteSettings', SiteSetting::first());
               //  View::composer('index', function ($view) use ($settings) {
@@ -74,19 +77,6 @@ class AppServiceProvider extends ServiceProvider
         // });
    
 
-
-
-    //hepsine uygular
-    //view()->composer('*', function ($view) {
-    //  $articles = Article::with('subjects', 'tags')->get();
-    //  $view->with('articles', $articles);
-    //});
-    
-    //dışarıdan değişken uygular
-    //$articles = Article::with('subjects', 'tags')->get();
-    // View::composer('pages.articles.*', function ($view) use ($articles) {
-    //     $view->with('articles', $articles);
-    //}); 
 
     }
 }

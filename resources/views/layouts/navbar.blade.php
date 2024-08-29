@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white fixed-top">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ route(config('routes.routes.siteSettings.index')) }}">
-            <img src="{{ asset('storage/images/logo5.gif') }}" alt="Logo" class="logo-img mr-2">
+            <img src="{{ asset('storage/images/logo.gif') }}" alt="Logo" class="logo-img mr-2">
             <span>{{ $siteSettings->site_title }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
